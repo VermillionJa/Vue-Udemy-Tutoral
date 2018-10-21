@@ -10,7 +10,8 @@
 <body>
     <div id="app">
         <button @click="incrementCounter(2, $event)">Click Me</button>
-        <p>{{counter}}</p>
+        <button @click="counter++">Click Me</button>
+        <p>{{counter > 10 ? "Greater than 10" : "Less than or equal to 10"}}</p>
         <p @mousemove="updateCoordinates">Coordinates: {{x}}/{{y}}
             - <span @mousemove.stop="">DEAD SPOT</span>
         </p>
