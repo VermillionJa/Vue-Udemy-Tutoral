@@ -9,10 +9,13 @@
 </head>
 <body>
     <div id="app">
-        <h1 v-once>{{ title }}</h1>
-        <p>{{ sayHello() }} - <a v-bind:href="link">Google</a></p>
-        <hr>
-        <p v-html="finishedLink"></p>
+        <button @click="incrementCounter(2, $event)">Click Me</button>
+        <p>{{counter}}</p>
+        <p @mousemove="updateCoordinates">Coordinates: {{x}}/{{y}}
+            - <span @mousemove.stop="">DEAD SPOT</span>
+        </p>
+
+        <input type="text" @keyup.enter.space="alertMe">
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>

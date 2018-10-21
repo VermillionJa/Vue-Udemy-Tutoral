@@ -1,14 +1,20 @@
 new Vue({
     el: "#app",
     data: {
-        title: "Hello World!",
-        link: "http://google.com",
-        finishedLink: `<a href="http://vuejs.org">Vue.JS</a>`
+        counter: 0,
+        x: 0,
+        y: 0
     },
     methods: {
-        sayHello() {
-            this.title = "Hewwo!!";
-            return this.title;
+        incrementCounter(step, e) {
+            this.counter += step;
+        },
+        updateCoordinates(e) {
+            this.x = e.clientX;
+            this.y = e.clientY;
+        },
+        alertMe() {
+            console.log("Enter pressed");
         }
     }
 });
