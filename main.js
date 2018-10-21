@@ -1,6 +1,12 @@
 new Vue({
     el: "#app",
     data: {
-        name: "Jake"
+        counter: 0,
+        secondCounter: 0
+    },
+    computed: {
+        result() {
+            return this.counter > 5 ? "X > 5" : "X <= 5";
+        }
     }
 });
